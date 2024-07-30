@@ -70,7 +70,7 @@ Where:
 - $j$ is the imaginary unit $( j^2 = -1 )$
 - $\omega$ is the angular frequency in rad/s
 - $\alpha$ is the phase exponent, which is a measure of non-ideality $(0 ≤\alpha ≤ 1)$
-- $C_{\text{CPE}}$is the CPE constant, which represents the effective capacitance of the CPE
+- $C_{\text{CPE}}$ is the CPE constant, which represents the effective capacitance of the CPE
 
 The phase exponent,  $\alpha$ , differentiates the CPE from an ideal capacitor. When $\alpha = 1$, the CPE reduces to an ideal capacitor. As $\alpha$ decreases from 1, the CPE behaves more and more like a capacitor at low frequencies. When $\alpha = 0$, the CPE becomes an ideal resistor. 
 
@@ -338,8 +338,6 @@ Open and explore the MATLAB<sup>®</sup> Live Script **batteryCell_parameterEsti
 ## License
 
 The license is available in the LICENSE.txt file in this GitHub repository.
-
-
 
 ## References
 
