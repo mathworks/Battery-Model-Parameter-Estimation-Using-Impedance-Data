@@ -9,6 +9,16 @@ Using [Electrochemical Impedance Spectroscopy (EIS)](https://pubs.acs.org/doi/10
 
 This demo uses impedance data of a battery cell to estimate the parameters of an **Equivalent Circuit Model (ECM)**. Estimated model parameters can directly be used for instance in a Simscape™ Battery™ block, such as [Simscape Battery (Table-Based)](https://www.mathworks.com/help/simscape-battery/ref/batterytablebased.html).
 
+
+
+電化メガトレンドのため、インピーダンスデータを使用したバッテリモデルパラメータの推定には大きな関心が集まっています。通常、バッテリモデルパラメータは時間領域のデータを使用して推定され、推定には通常時間がかかります。さらに、時間領域で測定されるデータの周波数コンテンツが制限される場合があります。
+
+[電気化学インピーダンス分光法(EIS)](https://pubs.acs.org/doi/10.1021/acsmeasuresciau.2c00070) のデータを使用してモデル・パラメータを直接推定すると、高速で、より広い周波数範囲をカバーすることができます。EISは基本的に、広い周波数範囲にわたって正弦波信号（交流電圧または電流）を印加し、系の正弦波応答（それぞれ電流または電圧）をモニターすることによって、平衡状態または定常状態の電気化学系に摂動を与えることに基づく周波数応答推定技術である。
+
+このデモでは、電池セルのインピーダンスデータを使用して、**等価回路モデル（ECM）** のパラメータを推定します。推定されたモデルパラメータは、例えば [Simscape Battery (Table-Based)](https://www.mathworks.com/help/simscape-battery/ref/batterytablebased.html) のようなSimscape™ Battery™ブロックで直接使用できます。
+
+
+
 Demo contents:
 
 - Discuss the practical frequency range for Li-ion Battery Impedance Spectroscopy
@@ -17,6 +27,22 @@ Demo contents:
 - Estimating a no-CPE circuit transfer function using a regular linear ECM (such a model can be simulated in Simulink)
 - Verify the no-CPE model using Simulink
 - Discuss advantages and disadvantages of CPEs for simulation
+
+## Getting Started
+
+Follow these steps to download the project and explore the example.
+
+#### Download the submission
+
+- Use the GitHub repository path above and clone it to a local PC directory to save the project files, or
+
+- Get a local copy of the project directly from MATLAB®, by using Simulink® ➡ Project from Git
+
+Start the MATLAB® project by clicking on the file **BatteryImpedanceStudy_git.prj**. This will load the necessary parameters and then run the simulation by using the MATLAB® Live Script **batteryCell_parameterEstimation.mlx**.
+
+#### Start exploring
+
+Open and explore the MATLAB® Live Script **batteryCell_parameterEstimation.mlx**.
 
 ## Practical Frequency Range for Li-ion Battery Impedance Spectroscopy
 
@@ -310,22 +336,6 @@ open_system(mdl+"/CCV")
 - Until Simulink will natively support fractional-order derivatives (to properly model CPEs), we believe that directly fitting a linear model is more preferable, as it is easier to use the model in the Simscape Battery blocks.
 
 - Optimization using nonlinear least-squares algorithm (implemented by [lsqnonlin](https://www.mathworks.com/help/optim/ug/lsqnonlin.html)) can be used to quickly estimate the parameters of an arbitrary circuit model, and is much faster compared to estimation using time domain data. 
-
-## Getting Started
-
-Follow these steps to download the project and explore the example.
-
-#### Download the submission
-
-* Use the GitHub repository path above and clone it to a local PC directory to save the project files, or 
-
-* Get a local copy of the project directly from MATLAB<sup>®</sup>, by using Simulink<sup>®</sup> ➡ Project from Git
-
-Start the MATLAB<sup>®</sup> project by clicking on the file **BatteryImpedanceStudy_git.prj**. This will load the necessary parameters and then run the simulation by using the MATLAB<sup>®</sup> Live Script **batteryCell_parameterEstimation.mlx**.
-
-#### Start exploring
-
-Open and explore the MATLAB<sup>®</sup> Live Script **batteryCell_parameterEstimation.mlx**. 
 
 ## MathWorks<sup>®</sup> products needed to run the demo
 
